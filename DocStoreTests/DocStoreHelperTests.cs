@@ -16,9 +16,9 @@ namespace DocStoreTests
         {
             var dsh = new ManageDocStoreHelper();
             // TODO: Get this from web.config
-            string docStoreName = "TestStore";
-            string docStoreRoot = @"c:\DocStoreRoot";
-            bool isCreates = dsh.CreateDocStore(docStoreName, docStoreRoot);
+            string docStoreName = Constants.DocStoreName;
+            string docStoreRoot = Constants.DocStoreRoot;
+            bool isCreated = dsh.CreateDocStore(docStoreName, docStoreRoot);
 
         }
     }

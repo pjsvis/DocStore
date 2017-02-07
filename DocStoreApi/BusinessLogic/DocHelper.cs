@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.IO;
 using System.Web;
 
 namespace DocStoreApi.BusinessLogic
 {
     public class DocHelper
     {
-        public  byte[] GetIdentFileBytes()
+        public byte[] GetIdentFileBytes()
         {
             // // TODO: If docId is zero then get the ident file
-            var filePath = Constants.IdentFilePath()
-            var fileBytes = System.IO.File.ReadAllBytes()
-           return new byte[0];
+            var filePath = VirtualPathUtility.Combine(Constants.DocStoreRoot, Constants.IdentFile);
+            var fileBytes = File.ReadAllBytes(filePath);
+            return fileBytes;
         }
     }
 }
